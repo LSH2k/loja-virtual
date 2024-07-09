@@ -35,16 +35,17 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     color: white;
-    margin-left: 16px;
+    padding: 0 16px;
 }
 
 section .container {
     align-items: flex-start;
     margin-top: 24px;
+    margin-bottom: 54px;
 }
 
-section img {
-    margin-right: 24px;
+#img-loja {
+    padding: 0 16px;
 }
 
 p {
@@ -54,8 +55,49 @@ p {
 h2 {
     border-bottom: 3px solid rgba(0, 0, 255, 0.39);
     font-style: italic;
-    color: rgb(0, 0, 255);
+    color: blue;
     padding-bottom: 8px;
     margin-bottom: 48px;
     width: 100%;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 16px;
+    gap: 16px;
+}
+
+h3 {
+    margin:8px 0;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto p {
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+button {
+    padding: 8px;
+    width: 100%;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 1.0em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
 }
