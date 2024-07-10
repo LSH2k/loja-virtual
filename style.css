@@ -46,6 +46,7 @@ section .container {
 
 #img-loja {
     padding: 0 16px;
+    max-width: 400px;
 }
 
 p {
@@ -100,4 +101,72 @@ button:hover {
     background-color: white;
     color: blue;
     border: 1px solid blue;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    height: 40px;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+footer > p {
+    padding-top: 13px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        overflow: hidden;
+    }
+
+    section .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-loja {
+        margin-bottom: 24px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+    
+    .produto {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 95%;
+        overflow: hidden;
+    }
+
+    section#sobre-a-loja .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-loja {
+        margin-bottom: 24px;
+    }
+
+    section .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .produto {
+        width: 300px;
+        margin: 20px 15px;
+    }
+
+    p {
+        font-size: 1.3em;
+    }
 }
